@@ -240,6 +240,53 @@ button {
 }
 .sidebar-bottom {
   margin-top: auto;
+  flex-shrink: 0;
+}
+.sidebar-bottom .sidebar-card {
+  margin: 18px 0 20px;
+  padding: 16px 14px;
+}
+.sidebar-bottom .sidebar-card .little-orbit {
+  display: none;
+}
+.sidebar-bottom .sidebar-card h3 {
+  font-size: 16px;
+  line-height: 1.5;
+}
+.sidebar {
+  overflow-y: auto;
+}
+.home-start {
+  padding-block: 64px;
+}
+.home-icon {
+  display: grid;
+  place-items: center;
+  width: 76px;
+  height: 76px;
+  border: 1px solid #dbe7d1;
+  border-radius: 22px;
+  background: #eaf1e4;
+  color: #52774b;
+  margin-bottom: 8px;
+}
+.home-start .eyebrow {
+  margin-bottom: 0;
+}
+.home-start h1 {
+  max-width: 600px;
+}
+.home-example {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 9px 14px;
+  margin-top: 26px;
+  padding-top: 25px;
+  border-top: 1px solid var(--line);
+  font-size: 13px;
+  color: var(--muted);
 }
 .sidebar-bottom .nav-item {
   font-size: 11px;

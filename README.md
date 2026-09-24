@@ -13,7 +13,7 @@ npm run dev
 
 Avant de démarrer, copier `.env.example` vers `.env.local` et renseigner `NEXT_PUBLIC_CARTO_API_KEY` avec une [clé CARTO Basemaps](https://carto.com/basemaps/apikey/). Redémarrer le serveur après modification. Cette clé est destinée au navigateur ; utiliser les restrictions de domaines proposées par CARTO. Les autres sources publiques fonctionnent sans clé. Sans clé CARTO, les points restent consultables et le fond de carte est signalé indisponible ; aucune tuile avec filigrane n’est chargée.
 
-Ouvrir http://127.0.0.1:3000. Une première fiche réelle est chargée pour le 10 rue de Bretagne. Rechercher une autre adresse pour lancer son analyse. Les codes postaux parisiens, y compris 75116, sont acceptés ; la banlieue est exclue.
+Ouvrir http://127.0.0.1:3000. L’accueil ne lance aucune analyse automatiquement : rechercher une adresse ou choisir l’exemple du 10 rue de Bretagne pour commencer. Un lien partagé contenant une adresse ouvre directement sa fiche. Les codes postaux parisiens, y compris 75116, sont acceptés ; la banlieue est exclue.
 
 ```bash
 npm run test

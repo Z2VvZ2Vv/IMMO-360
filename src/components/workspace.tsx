@@ -181,7 +181,7 @@ export default function Workspace() {
   const [view, setView] = useState<View>("explore");
   const [tab, setTab] = useState<Tab>("overview");
   const [report, setReport] = useState<Report | null>(null);
-  const [loading, setLoading] = useState(true);
+  const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
   useReportTool(!loading && !error && view === "explore" ? report : null);
   const [query, setQuery] = useState("");
@@ -262,7 +262,8 @@ export default function Workspace() {
     }
     setHydrated(true);
     const params = new URLSearchParams(window.location.search);
-    void analyze(undefined, params.get("q") ?? DEFAULT_QUERY);
+    const sharedAddress = params.get("q")?.trim();
+    if (sharedAddress) void analyze(undefined, sharedAddress);
     return () => reportController.current?.abort();
     // Load once; following searches are explicit user actions.
     // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -435,21 +436,6 @@ export default function Workspace() {
             </button>
           ))}
         </nav>
-        <div className="sidebar-card">
-          <span className="little-orbit">
-            <MapPin size={20} />
-          </span>
-          <h3>
-            Une adresse.
-            <br />
-            Toutes les perspectives.
-          </h3>
-          <p>Les données pour mieux choisir votre prochain chez-vous.</p>
-          <div className="paris-pill">
-            <span />
-            Paris · 20 arrondissements
-          </div>
-        </div>
         <div className="sidebar-bottom">
           <button
             className={`nav-item ${view === "sources" ? "active" : ""}`}
@@ -463,12 +449,20 @@ export default function Workspace() {
             <ShieldCheck size={18} />
             Confidentialité
           </button>
-          <div className="local-profile">
-            <div className="avatar">M</div>
-            <span>
-              Mon espace personnel<small>Enregistré sur cet appareil</small>
+          <div className="sidebar-card">
+            <span className="little-orbit">
+              <MapPin size={20} />
             </span>
-            <span className="local-dot" />
+            <h3>
+              Une adresse.
+              <br />
+              Toutes les perspectives.
+            </h3>
+            <p>Les données pour mieux choisir votre prochain chez-vous.</p>
+            <div className="paris-pill">
+              <span />
+              Paris · 20 arrondissements
+            </div>
           </div>
         </div>
       </aside>
@@ -633,6 +627,23 @@ export default function Workspace() {
               <ChevronDown size={13} />
             </span>
           </div>
+          {view === "explore" && !report && !loading && !error && (
+            <section className="empty-state home-start" aria-labelledby="home-title">
+              <span className="home-icon"><MapPin size={32} /></span>
+              <span className="eyebrow">PARIS, À LA LOUPE</span>
+              <h1 id="home-title">Explorez votre prochaine adresse.</h1>
+              <p>Cadre de vie, énergie, prix et points à vérifier : commencez par rechercher une adresse à Paris.</p>
+              <button className="button primary" onClick={() => searchInput.current?.focus()}>
+                <Search size={16} />Rechercher une adresse
+              </button>
+              <div className="home-example">
+                <span>Envie de tester ?</span>
+                <button className="text-link" onClick={() => void analyze(undefined, DEFAULT_QUERY)}>
+                  Découvrir le 10 rue de Bretagne<ArrowRight size={15} />
+                </button>
+              </div>
+            </section>
+          )}
           {view === "explore" && loading && (
             <div className="loading-view">
               <div className="loading-icon">
