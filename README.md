@@ -4,7 +4,7 @@ Application web en français pour préparer un achat, une location et une visite
 
 ## Démarrer
 
-Node.js 22 ou version LTS plus récente.
+Node.js 24 LTS, fixé par `engines.node` et `.nvmrc` pour aligner le développement, la CI et Vercel. Le script d’installation de la version verrouillée d’esbuild est explicitement autorisé dans `allowScripts`.
 
 ```bash
 npm ci
@@ -26,7 +26,7 @@ npm start
 
 1. Dans Vercel, choisir **Add New → Project** et importer `Z2VvZ2Vv/IMMO-360`.
 2. Conserver le preset **Next.js**, le dossier racine `./` et les commandes détectées automatiquement.
-3. Choisir une version Node.js LTS compatible (22 ou 24). Ajouter `NEXT_PUBLIC_CARTO_API_KEY` dans **Settings → Environment Variables**, avec la clé CARTO Basemaps comme valeur, pour Production et Preview.
+3. Choisir **Node.js 24.x** dans les réglages de build Vercel, comme indiqué dans `package.json`. Ajouter `NEXT_PUBLIC_CARTO_API_KEY` dans **Settings → Environment Variables**, avec la clé CARTO Basemaps comme valeur, pour Production et Preview.
 4. Déployer. Si la variable est ajoutée après un premier déploiement, redéployer : Next.js l’intègre au build. Définir `main` comme branche de production : les pushes suivants déclencheront un déploiement.
 
 Le fichier `vercel.json` sélectionne Paris (`cdg1`) pour les fonctions. Les sources externes sont appelées uniquement à la consultation, pas pendant le build. La route d’analyse prévoit 60 secondes maximum ; chaque requête externe a un délai de 9 secondes. Les requêtes indépendantes sont concurrentes et les indisponibilités sont isolées. Le fonctionnement dépend de l’accès réseau aux sources publiques.
