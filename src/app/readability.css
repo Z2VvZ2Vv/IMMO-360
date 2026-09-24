@@ -1,0 +1,519 @@
+/* Keep the compact desktop composition readable, including narrow app panels. */
+@media screen {
+  .metric-confidence {
+    display: flex;
+    align-items: flex-start;
+    gap: 5px;
+    font-size: 0.75rem;
+    line-height: 1.6;
+    margin-top: 12px;
+    padding-top: 10px;
+    border-top: 1px solid #edf1e8;
+    color: #657857;
+    width: 100%;
+  }
+  .metric-confidence svg {
+    margin-top: 4px;
+  }
+  .nav-item {
+    font-size: 0.875rem;
+  }
+  .sidebar-card p,
+  .local-profile,
+  .local-profile small {
+    font-size: 0.75rem;
+    line-height: 1.7;
+  }
+  .sidebar-bottom .nav-item {
+    font-size: 0.75rem;
+  }
+  .brand small,
+  .workspace-label,
+  .paris-pill,
+  .pilot-badge,
+  .eyebrow {
+    font-size: 0.75rem;
+  }
+  .brand small {
+    font-size: 0.625rem;
+    letter-spacing: 1.3px;
+  }
+  .nav-count,
+  .breadcrumb,
+  .report-heading p,
+  .search-box kbd,
+  .search-location {
+    font-size: 0.75rem;
+  }
+  .search-box input,
+  .search-results > button,
+  .search-status {
+    font-size: 0.875rem;
+  }
+  .search-label,
+  .search-foot,
+  .search-results small {
+    font-size: 0.75rem;
+  }
+  .report-actions .button,
+  .button,
+  .export-menu button,
+  .report-tabs > button {
+    font-size: 0.875rem;
+  }
+  .report-tabs {
+    gap: 24px;
+  }
+  .report-tabs > button {
+    padding-bottom: 16px;
+  }
+  .tag,
+  .tag.light,
+  .card-eyebrow .tag,
+  .attention-row > .tag,
+  .tab-counter {
+    font-size: 0.75rem;
+  }
+  .card-eyebrow,
+  .summary-bottom,
+  .coverage-ring span,
+  .summary-copy button {
+    font-size: 0.75rem;
+  }
+  .coverage-ring span {
+    line-height: 1.4;
+  }
+  .summary-body {
+    padding-block: 28px;
+  }
+  .summary-copy p {
+    font-size: 0.875rem;
+    line-height: 1.75;
+    color: #5b7152;
+  }
+  .summary-copy h2 {
+    font-size: 1.375rem;
+    line-height: 1.5;
+  }
+  .summary-bottom {
+    flex-wrap: wrap;
+    color: #526d48;
+  }
+  .summary-copy button {
+    font-size: 0.875rem;
+  }
+  .metric-label {
+    font-size: 0.875rem;
+    color: #687660;
+  }
+  .metric-value {
+    font-size: 1.875rem;
+  }
+  .metric-value small,
+  .metric-description {
+    font-size: 0.75rem;
+    color: #6a775f;
+  }
+  .metric-value {
+    white-space: normal;
+  }
+  .metric-description {
+    line-height: 1.7;
+  }
+  .metric-top {
+    margin-bottom: 18px;
+  }
+  .section-heading h2,
+  .panel-title h2 {
+    font-size: 1.125rem;
+  }
+  .section-heading p,
+  .panel-title p {
+    font-size: 0.875rem;
+    line-height: 1.6;
+    color: #718066;
+  }
+  .section-heading {
+    margin-top: 30px;
+  }
+  .map-card-head {
+    font-size: 0.875rem;
+    height: 49px;
+  }
+  .map-layers button,
+  .map-caption {
+    font-size: 0.75rem;
+  }
+  .map-tools button {
+    width: 32px;
+    height: 32px;
+  }
+  .map-shell {
+    min-height: 292px;
+  }
+  .legend-label,
+  .teaser-top > span,
+  .teaser-progress {
+    font-size: 0.75rem;
+  }
+  .attention-row h3 {
+    font-size: 0.875rem;
+    line-height: 1.5;
+  }
+  .attention-row p {
+    font-size: 0.875rem;
+    line-height: 1.7;
+    color: #6d7b62;
+  }
+  .attention-row {
+    padding-block: 21px;
+    align-items: flex-start;
+  }
+  .attention-icon {
+    margin-top: 3px;
+  }
+  .attention-panel > .panel-title {
+    padding-top: 23px;
+    padding-bottom: 9px;
+  }
+  .attention-panel .panel-bottom,
+  .panel-bottom {
+    font-size: 0.75rem;
+    color: #6c7c60;
+    align-items: flex-start;
+  }
+  .attention-panel .panel-bottom svg {
+    margin-top: 3px;
+  }
+  .visit-teaser h2 {
+    font-size: 1.6rem;
+    margin-top: 20px;
+  }
+  .visit-teaser p {
+    font-size: 0.875rem;
+    line-height: 1.8;
+    color: #5e7350;
+  }
+  .visit-teaser > button {
+    font-size: 0.875rem;
+    margin-top: auto;
+    padding-top: 22px;
+  }
+  .teaser-progress {
+    margin-top: 20px;
+    color: #657954;
+  }
+  .source-strip {
+    gap: 25px;
+    flex-wrap: wrap;
+  }
+  .source-strip > span {
+    font-size: 0.625rem;
+    max-width: 116px;
+    color: #758769;
+  }
+  .source-strip > button,
+  .report-footer,
+  .report-footer button {
+    font-size: 0.75rem;
+    color: #6a7d5e;
+  }
+  .report-footer {
+    align-items: flex-start;
+    line-height: 1.8;
+    flex-wrap: wrap;
+  }
+  .report-footer > span {
+    flex-wrap: wrap;
+  }
+  .compact > p,
+  .section-intro > p {
+    font-size: 1rem;
+    line-height: 1.85;
+    color: #65785a;
+  }
+  .text-link,
+  .text-button,
+  .compact > .text-link,
+  .inline-links a {
+    font-size: 0.875rem;
+  }
+  .panel-header h2,
+  .compact .panel-title h2,
+  .methodology-grid .compact > h2 {
+    font-size: 1.125rem;
+  }
+  .panel-header p,
+  .methodology-grid .compact > p {
+    font-size: 0.875rem;
+    line-height: 1.8;
+    color: #67795b;
+  }
+  .places-grid .place-row strong {
+    font-size: 0.875rem;
+  }
+  .place-row small,
+  .place-row > span:last-child,
+  .panel-header .muted,
+  .muted {
+    font-size: 0.75rem;
+    color: #738766;
+  }
+  .segmented button,
+  .select-label,
+  select,
+  .source-row h3 {
+    font-size: 0.875rem;
+  }
+  .source-row p,
+  .info-callout,
+  .dpe-panel > .info-callout,
+  .visit-notes .info-callout {
+    font-size: 0.875rem;
+    line-height: 1.8;
+    color: #617752;
+  }
+  .source-row small {
+    font-size: 0.75rem;
+    color: #6d805e;
+    line-height: 1.7;
+  }
+  .source-row-title {
+    gap: 8px;
+  }
+  .method-bottom h2 {
+    font-size: 1.125rem;
+  }
+  .method-bottom p,
+  .empty-state p {
+    font-size: 1rem;
+    color: #677c59;
+  }
+  .market-summary > div > span,
+  .market-note p {
+    font-size: 0.875rem;
+    color: #6f835f;
+  }
+  .market-summary small,
+  th,
+  .address-cell small,
+  .dpe-scale span {
+    font-size: 0.75rem;
+    color: #647a53;
+  }
+  td,
+  .compare-table td,
+  .compare-table tbody th {
+    font-size: 0.875rem;
+  }
+  .dpe-panel .info-callout {
+    line-height: 1.8;
+  }
+  .checklist-row strong,
+  .checklist-row > span > span,
+  .visit-notes textarea,
+  .simple-check {
+    font-size: 0.875rem;
+    line-height: 1.8;
+  }
+  .checklist-row > span > span {
+    color: #728763;
+  }
+  .checklist-row small,
+  .notes-saved,
+  .form-row label,
+  .form-row select {
+    font-size: 0.75rem;
+    color: #6a805b;
+  }
+  .checklist-row input {
+    width: 19px;
+    height: 19px;
+  }
+  .saved-toolbar,
+  .saved-stats,
+  .saved-card > p {
+    font-size: 0.875rem;
+    color: #667e56;
+    line-height: 1.8;
+  }
+  .footnote,
+  .loading-view > p {
+    font-size: 0.875rem;
+    color: #6a805a;
+  }
+  .loading-steps,
+  .toast,
+  .privacy-dialog p {
+    font-size: 0.875rem;
+  }
+  .privacy-dialog p {
+    color: #637958;
+  }
+  .search-results small,
+  .report-heading p {
+    color: #6f7e66;
+  }
+  .panel-empty {
+    font-size: 0.875rem;
+    color: #637857;
+  }
+}
+@media screen and (min-width: 761px) {
+  .sidebar {
+    width: 238px;
+    padding-inline: 16px;
+  }
+  .main-shell {
+    margin-left: 238px;
+    width: calc(100% - 238px);
+  }
+  .sidebar-bottom .nav-item {
+    gap: 8px;
+    padding-inline: 5px;
+  }
+  .sidebar-bottom .nav-item > svg:last-child:not(:first-child) {
+    display: none;
+  }
+  .local-profile {
+    gap: 7px;
+  }
+  .local-profile small {
+    font-size: 0.625rem;
+  }
+  .toast {
+    left: calc(50% + 119px);
+  }
+}
+@media screen and (min-width: 1200px) and (max-width: 1450px) {
+  .summary-body {
+    gap: 19px;
+  }
+  .coverage-ring {
+    width: 112px;
+    height: 112px;
+  }
+  .coverage-ring span {
+    font-size: 0.6875rem;
+  }
+  .summary-copy h2 {
+    font-size: 1.2rem;
+  }
+  .attention-row > .tag {
+    display: none;
+  }
+}
+@media screen and (max-width: 1199px) {
+  .overview-top {
+    grid-template-columns: 1fr;
+  }
+  .summary-copy p {
+    max-width: 460px;
+  }
+  .coverage-ring {
+    width: 134px;
+    height: 134px;
+  }
+  .metric-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .overview-bottom {
+    grid-template-columns: 1fr;
+  }
+  .visit-teaser h2 br {
+    display: none;
+  }
+  .visit-teaser p {
+    max-width: none;
+  }
+  .attention-row > .tag {
+    display: inline-flex;
+  }
+}
+@media screen and (max-width: 760px) {
+  .sidebar {
+    visibility: hidden;
+  }
+  .sidebar.open {
+    visibility: visible;
+  }
+  .report-heading h1 {
+    font-size: 1.7rem;
+  }
+  .summary-copy h2 {
+    font-size: 1.2rem;
+  }
+  .summary-body {
+    gap: 17px;
+  }
+  .coverage-ring {
+    width: 112px;
+    height: 112px;
+  }
+  .coverage-ring span {
+    font-size: 0.625rem;
+  }
+  .summary-copy p {
+    font-size: 0.875rem;
+  }
+  .summary-copy button {
+    font-size: 0.75rem;
+  }
+  .summary-bottom,
+  .card-eyebrow {
+    font-size: 0.6875rem;
+  }
+  .card-eyebrow .tag {
+    font-size: 0.625rem;
+  }
+  .metric-value {
+    font-size: 1.65rem;
+  }
+  .metric-value small {
+    display: block;
+    margin-left: 0;
+    margin-top: 4px;
+  }
+  .attention-row > .tag {
+    display: none;
+  }
+  .panel-title h2,
+  .section-heading h2 {
+    font-size: 1rem;
+  }
+  .section-heading p {
+    font-size: 0.875rem;
+  }
+  .source-strip > button {
+    font-size: 0.75rem;
+  }
+  .map-layers {
+    left: 8px;
+    right: 48px;
+    gap: 0;
+  }
+  .map-layers button {
+    padding-inline: 5px;
+    flex: 1;
+    font-size: 0.6875rem;
+  }
+  .map-tools {
+    right: 8px;
+  }
+  .map-caption {
+    font-size: 0.6875rem;
+  }
+  .source-row .tag {
+    font-size: 0.6875rem;
+  }
+  .sources-panel .panel-header {
+    flex-wrap: wrap;
+  }
+  .market-summary {
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+  .report-footer {
+    font-size: 0.6875rem;
+  }
+}
